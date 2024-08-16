@@ -1,0 +1,64 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" controllerName="dev.citascambaceo.controller.CItasCambaceo"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+	xmlns:st="sap.ui.comp.smarttable"
+	xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    
+    <Page id="page" title="{i18n>title}">
+        <Panel headerText="Formulario" width="auto" class="centro">
+                <Label text="Centro:" class ="sapUiResponsiveMargin centrot sapThemeHighlight-asColor"/>
+                <Input id="idcentro" width="70px" class ="sapUiResponsiveMargin inputc"/>
+                <Label text="Estatus:" class ="sapUiResponsiveMargin sapThemeHighlight-asColor"/>             
+                <Select id="inestatus" width="150px" class ="sapUiResponsiveMargin inpute">
+                    <items>
+                        <core:Item text="Nuevas Citas"/>
+                        <core:Item text="En Proceso"/>
+                        <core:Item text="Concluida"/>
+                        <core:Item text="Cancelada"/>
+                    </items>
+                </Select>
+                <Button text="Obtener" width="100px" press="onReadFilters" icon="sap-icon://business-card" class="sapUiResponsiveMargin btnconsultar" type="Transparent"/>
+        </Panel>
+        <Panel headerText="Lista de Cambaceo" class="sapUiResponsiveMargin centro" width="auto">
+            <Table id="cambaceo" items="{/results}">
+                <columns>
+                    <Column width="50px">
+                        <Text text="Sociedad" class="sapThemeHighlight-asColor"/>
+                    </Column>
+                    <Column width="200px">
+                        <Text text="Nombre de cliente" class="sapThemeHighlight-asColor"/>
+                    </Column>
+                    <Column width="200px">
+                        <Text text="Nombre Vendedor" class="sapThemeHighlight-asColor"/>
+                    </Column>
+                    <Column width="100px">
+                        <Text text="Origen Venta" class="sapThemeHighlight-asColor"/>
+                    </Column>
+                    <Column width="50px">
+                        <Text text="Centro" class ="sapThemeHighlight-asColor"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem >
+                        <cells>
+                            <Text text="{Bukrs}"></Text>
+                        </cells>
+                        <cells>
+                            <Text text="{NombreCliente}"></Text>
+                        </cells>
+                        <cells>
+                            <Text text="{NombreVendedor}"></Text>
+                        </cells>
+                        <cells>
+                            <Text text="{OrigenVenta}"></Text>
+                        </cells>
+                        <cells>
+                            <Text text="{Centro}"></Text>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </Panel>
+    </Page>
+</mvc:View>

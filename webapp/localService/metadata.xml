@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZGW_CITAS_CAMBACEO_SRV" xml:lang="es" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="citas" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Bukrs"/>
+                    <PropertyRef Name="FolioCita"/>
+                    <PropertyRef Name="NombreCliente"/>
+                </Key>
+                <Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sociedad"/>
+                <Property Name="FolioCita" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Folio Cita Delivery" sap:filterable="false"/>
+                <Property Name="NombreCliente" Type="Edm.String" Nullable="false" MaxLength="150" sap:unicode="false" sap:label="Nombre de Cliente"/>
+                <Property Name="FacebookUrl" Type="Edm.String" MaxLength="255" sap:unicode="false" sap:label="Facebook URL" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OrigenVenta" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Origen Venta" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SubOrigen" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Suborigen Venta" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TipoVenta" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Tipo Venta" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FechaCita" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Fecha" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HoraCita" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="Campo de tipo TIMS" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelCliente" Type="Edm.String" MaxLength="16" sap:unicode="false" sap:label="Teléfono 1" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tel2" Type="Edm.String" MaxLength="16" sap:unicode="false" sap:label="Teléfono 2" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estado" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Estado" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Localidad" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="Localidad" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CodigoPostal" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Código postal" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Colonia" Type="Edm.String" MaxLength="50" sap:unicode="false" sap:label="Colonia" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Calle" Type="Edm.String" MaxLength="100" sap:unicode="false" sap:label="Calle/Número" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Numero" Type="Edm.String" MaxLength="5" sap:unicode="false" sap:label="Número" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Latitud" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Latitud" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Longitud" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Longitud" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Equipo" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Material" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DescEquipo" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Denominación" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Comentario" Type="Edm.String" MaxLength="150" sap:unicode="false" sap:label="Comentario" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Centro" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Centro" sap:sortable="false"/>
+                <Property Name="Vendedor" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Gr.vendedores" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NombreVendedor" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Nombre de Cliente" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="VendedorCambaceo" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Gr.vendedores" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NombreVendedorCambaceo" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Nombre de Cliente" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Imei" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="NºIMEI" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ticket" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Num Ticket" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Estatus" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Estatus Cita" sap:sortable="false"/>
+                <Property Name="FlagUpdate" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Flag Update" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MotivoCancel" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Motivo Cancelación" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="vendors" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="VKBUR"/>
+                    <PropertyRef Name="Vkgrp"/>
+                </Key>
+                <Property Name="VKBUR" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Oficina ventas" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Vkgrp" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Gr.vendedores" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="Vkgrptext" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Descripción" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="indicador" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Estado" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+            </EntityType>
+            <EntityType Name="stock" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Werks"/>
+                    <PropertyRef Name="Material"/>
+                </Key>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Centro" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Material" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Maktx" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Denominación" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="roles" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="User"/>
+                </Key>
+                <Property Name="User" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Rol" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Rol de Usuario" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="centros" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Werks"/>
+                </Key>
+                <Property Name="Werks" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Centro Delivery" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Descripción Centro" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="origen" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ClaveOrigen"/>
+                </Key>
+                <Property Name="ClaveOrigen" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Clave Origen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DescrpcionOrigen" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Origen Descripción" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="suborigen" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Origen"/>
+                    <PropertyRef Name="Suborigen"/>
+                </Key>
+                <Property Name="Origen" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Clave Origen" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Suborigen" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="SubOrigen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="SubOrigen Desc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZGW_CITAS_CAMBACEO_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="get_citasSet" EntityType="ZGW_CITAS_CAMBACEO_SRV.citas" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="get_vendorsSet" EntityType="ZGW_CITAS_CAMBACEO_SRV.vendors" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="stockSet" EntityType="ZGW_CITAS_CAMBACEO_SRV.stock" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="rolesSet" EntityType="ZGW_CITAS_CAMBACEO_SRV.roles" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="centrosSet" EntityType="ZGW_CITAS_CAMBACEO_SRV.centros" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="origenSet" EntityType="ZGW_CITAS_CAMBACEO_SRV.origen" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="suborigenSet" EntityType="ZGW_CITAS_CAMBACEO_SRV.suborigen" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <atom:link rel="self" href="https://captd3.macropay.mx:44304/sap/opu/odata/sap/ZGW_CITAS_CAMBACEO_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://captd3.macropay.mx:44304/sap/opu/odata/sap/ZGW_CITAS_CAMBACEO_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
